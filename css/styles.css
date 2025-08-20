@@ -1,31 +1,46 @@
-/* Estilos personalizados (puedes agregar tus propias modificaciones aquí) */
+/* ---- Global ---- */
 body {
     font-family: sans-serif;
-/* Agrega la imagen de fondo */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* asegura que ocupe toda la pantalla */
+    
+    /* Fondo con imagen */
     background-image: url('../imagenes/unnamed.png');
-    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-attachment: fixed; /* Fija la imagen de fondo para que no se mueva al hacer scroll */
-    background-position: center; /* Centra la imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
+main {
+    flex: 1; /* Empuja el footer hacia abajo */
+}
 
-/*--------NAV---------*/
+/*-------- NAV --------*/
 .navbar-brand {
-font-weight: bold;
+    font-weight: bold;
 }
 
-/*----------TARJETAS---------*/
+/*---------- TARJETAS ---------*/
 .card-title {
-font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
-
-/*-----------FOOTER-------------*/
-/* Fija el footer en la parte inferior de la ventana */
-.footer {
-    position: fixed;
-    bottom: 0;
+/*----------- FOOTER -------------*/
+footer {
+    background-color: #f8f9fa; /* Igual que navbar-light */
+    color: #212529;
+    border-top: 1px solid #dee2e6;
+    padding: 1rem 0;
     width: 100%;
-    z-index: 1000; /* Asegura que el footer esté por encima de otros elementos */
+}
+
+footer a {
+    color: #212529;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
